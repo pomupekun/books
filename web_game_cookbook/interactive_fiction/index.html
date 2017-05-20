@@ -1,3 +1,44 @@
 <!DOCTYPE html>
+<html lang="ja">
 
+<head>
+    <meta charset="utf8">
+	<title>01. interactive fiction</title>
+	<link href="main.css" rel="stylesheet" />
+</head>
 
+<body>
+	<div id="impress">
+		<div id="1" class="step slide">
+			<p>ここにあるのはタイムマシン。スイッチをONにする？</p>
+            <p><a href="#2">ON</a>にする。</p>
+			<p>科学者のパパが帰ってくるのを<a href="#3">待つ</a>。</p>
+			<!--<q>最初のページ。スペース、下、右キーで次のページ。左か上で前のページ。</q>-->
+		</div>
+
+		<div id="2" class="step slide" data-x="-1500">
+            <div class="slide-text">
+				<p>タイムスリップ! 楽しい。</p>
+			</div>
+			<div class="menu"><a href="#1">やり直し</a></div>
+			<!--<q>スペース、下、右キーで次のページ</q>-->
+		</div>
+
+		<div id="3" class="step slide" data-x="1500">
+            <div class="slide-text">
+				<p>しばらくしてパパが帰ってきた。</p>
+				<p>パパはあなたの宿題を手伝ってくれました。</p>
+				<p>ラッキーだったけど、楽しくはなかった。</p>
+			</div>
+			<div class="menu"><a href="#1">やり直し</a></div>
+			<!--<q>最後のページ。右を押すと最初に戻る</q>-->
+		</div>
+	</div>
+	<script src="../../libs/impress.js"></script>
+	<script>
+		impress().init();
+	</script>
+
+</body>
+
+</html>
